@@ -6,153 +6,280 @@
 <title>Children with Potential Foundation</title>
 
 <style>
-body{
-  font-family: Arial, sans-serif;
-  margin:0;
-  line-height:1.6;
-  background:#f9f9f9;
+/* Added box-sizing so padding doesn't affect overall widths (Professional Standard) */
+* {
+  box-sizing: border-box;
 }
 
-header{
-  background:#0a4d8c;
-  color:white;
-  padding:15px 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+body {
+  font-family: 'Segoe UI', Arial, sans-serif; /* Slightly more modern font stack */
+  margin: 0;
+  line-height: 1.6;
+  background: #f4f7f6; /* Softer background color */
+  color: #333; /* Softer text color for better readability */
+}
+
+header {
+  background: #0a4d8c;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Added shadow for depth */
 }
 
-nav a{
-  color:white;
-  margin:0 15px;
-  text-decoration:none;
-  font-weight:bold;
-  transition: color 0.3s;
+header h2 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: 1px;
 }
 
-nav a:hover{
-  color:#ff9800;
-}
-
-.donate{
-  background:#ff9800;
-  padding:10px 18px;
-  border-radius:5px;
-}
-
-.hero{
-  background:url('https://images.unsplash.com/photo-1596496052859-6a1d9f3f0d8f') center/cover no-repeat;
-  background-size: cover;
-  color:white;
-  text-align:center;
-  padding:120px 20px;
-}
-
-.hero h1{
-  font-size:45px;
-  margin-bottom:10px;
-}
-
-.hero p{
-  font-size:20px;
-  margin-bottom:20px;
-}
-
-.btn{
-  background:#ff9800;
-  color:white;
-  padding:12px 22px;
-  text-decoration:none;
-  border-radius:5px;
-  margin:5px;
-  display:inline-block;
-  transition: background 0.3s;
-}
-
-.btn:hover{
-  background:#e68900;
-}
-
-.section{
-  padding:60px 40px;
-  max-width:1100px;
-  margin:auto;
-}
-
-.stats{
-  display:flex;
-  justify-content:space-around;
-  text-align:center;
-  background:white;
-  padding:40px 0;
+nav {
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
 }
 
-.stat h2{
-  color:#0a4d8c;
-  font-size:35px;
-  margin-bottom:5px;
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-.programs{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
+nav a:hover {
+  color: #ff9800;
 }
 
-.card{
-  background:white;
-  padding:25px;
-  border-radius:6px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+.donate {
+  background: #ff9800;
+  padding: 8px 20px;
+  border-radius: 25px; /* Pill-shape for main CTA */
+  transition: background 0.3s, transform 0.2s;
 }
 
-.card:hover{
-  transform: translateY(-5px);
+.donate:hover {
+  background: #e68900;
+  color: white;
+  transform: scale(1.05); /* Slight pop effect */
 }
 
-footer{
-  background:#0a4d8c;
-  color:white;
-  text-align:center;
-  padding:30px;
-  margin-top:40px;
+/* Added a dark gradient overlay so white text is always readable regardless of image */
+.hero {
+  background: linear-gradient(rgba(10, 77, 140, 0.7), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1596496052859-6a1d9f3f0d8f') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 140px 20px;
 }
 
-footer a{
-  color:white;
-  margin: 0 10px;
-  text-decoration:none;
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for legibility */
 }
 
-footer a:hover{
-  color:#ff9800;
+.hero p {
+  font-size: 22px;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-input, textarea{
-  width:100%;
-  padding:10px;
-  margin:8px 0;
-  border:1px solid #ccc;
-  border-radius:4px;
+.btn {
+  background: #ff9800;
+  color: white;
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 10px;
+  display: inline-block;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
 }
 
-button{
-  background:#0a4d8c;
-  color:white;
-  border:none;
-  padding:12px 20px;
-  border-radius:4px;
-  cursor:pointer;
+.btn:hover {
+  background: #e68900;
+  transform: translateY(-2px); /* Lifts button on hover */
+}
+
+.section {
+  padding: 80px 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  color: #0a4d8c;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #ff9800;
+  margin: 10px auto 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background: white;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Added subtle shadow */
+  margin-top: -40px; /* Pulls stats up over the hero slightly */
+  position: relative;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stat {
+  padding: 20px;
+}
+
+.stat h2 {
+  color: #ff9800; /* Changed to orange for impact */
+  font-size: 45px;
+  margin: 0 0 5px 0;
+}
+
+.programs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top: 4px solid #0a4d8c; /* Adds a nice branded top border */
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  color: #0a4d8c;
+  margin-top: 0;
+}
+
+.impact-quotes p {
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-left: 4px solid #ff9800;
+  border-radius: 4px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #0a4d8c; /* Highlights on click */
+}
+
+button {
+  background: #0a4d8c;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
   transition: background 0.3s;
 }
 
-button:hover{
-  background:#093a6c;
+button:hover {
+  background: #093a6c;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+footer {
+  background: #0a4d8c;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+footer a:hover {
+  opacity: 1;
+  color: #ff9800;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+  nav {
+    margin-top: 15px;
+    justify-content: center;
+    gap: 10px;
+  }
+  nav a {
+    margin: 5px;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+  .stats {
+    margin-top: 20px;
+    flex-direction: column;
+  }
 }
 </style>
 </head>
@@ -195,13 +322,15 @@ button:hover{
 
 <section class="section" id="about">
   <h2>About Us</h2>
-  <p>
-    Children with Potential Foundation (CPF) is dedicated to empowering disadvantaged students in Malawi.
-    We believe every child has the potential to succeed if given access to education and the necessary learning resources.
-  </p>
-  <p>
-    Our mission is to reduce school dropout rates by providing school supplies, academic support, and working closely with communities and teachers.
-  </p>
+  <div style="text-align: center; max-width: 800px; margin: auto;">
+    <p>
+      Children with Potential Foundation (CPF) is dedicated to empowering disadvantaged students in Malawi.
+      We believe every child has the potential to succeed if given access to education and the necessary learning resources.
+    </p>
+    <p>
+      Our mission is to reduce school dropout rates by providing school supplies, academic support, and working closely with communities and teachers.
+    </p>
+  </div>
 </section>
 
 <section class="section" id="programs">
@@ -224,40 +353,62 @@ button:hover{
 
 <section class="section" id="impact">
   <h2>Impact & Testimonies</h2>
-  <p>"Thanks to CPF, I was able to return to school and continue my education." – Student Beneficiary</p>
-  <p>"The support from CPF has helped many students in our school remain focused on their studies." – Local Teacher</p>
+  <div class="impact-quotes">
+    <p>"Thanks to CPF, I was able to return to school and continue my education." <br><strong>– Student Beneficiary</strong></p>
+    <p>"The support from CPF has helped many students in our school remain focused on their studies." <br><strong>– Local Teacher</strong></p>
+  </div>
 </section>
 
 <section class="section" id="contact">
   <h2>Contact Us</h2>
-  <form>
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <textarea rows="5" placeholder="Your Message"></textarea>
-    <button>Send Message</button>
+  <form id="contactForm">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
   </form>
-  <p>Email: <a href="mailto:info@childrenpf.org">info@childrenpf.org</a><br>
-  Phone: +265 997 267 390</p>
+  
+  <div class="contact-info">
+    <p>Email: <a href="mailto:info@childrenpf.org" style="color:#0a4d8c;">info@childrenpf.org</a><br>
+    Phone: +265 997 267 390</p>
+  </div>
 </section>
 
 <footer>
   <p>© 2026 Children with Potential Foundation</p>
   <p>
-    <a href="https://facebook.com" target="_blank">Facebook</a>|
-    <a href="https://linkedin.com" target="_blank">LinkedIn</a>|
+    <a href="https://facebook.com" target="_blank">Facebook</a> |
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
     <a href="https://instagram.com" target="_blank">Instagram</a>
   </p>
 </footer>
 
 <script>
-// Smooth scrolling for anchor links
+// FIX 1: Improved Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    
+    const targetId = this.getAttribute('href');
+    
+    // If it's just "#" (the Home link), scroll to the very top
+    if (targetId === '#') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+        // Otherwise, find the section and scroll to it
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
   });
+});
+
+// FIX 2: Prevent Form Refresh
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // This stops the page from reloading
+    alert('Thank you for your interest! We will get back to you soon.');
+    this.reset(); // Clears the form fields
 });
 </script>
 
