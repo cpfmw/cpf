@@ -6,249 +6,260 @@
 <title>Children with Potential Foundation</title>
 
 <style>
-
 body{
-font-family: Arial, sans-serif;
-margin:0;
-line-height:1.6;
-background:#f9f9f9;
+  font-family: Arial, sans-serif;
+  margin:0;
+  line-height:1.6;
+  background:#f9f9f9;
 }
 
 header{
-background:#0a4d8c;
-color:white;
-padding:15px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+  background:#0a4d8c;
+  color:white;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav a{
-color:white;
-margin:0 15px;
-text-decoration:none;
-font-weight:bold;
+  color:white;
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:bold;
+  transition: color 0.3s;
+}
+
+nav a:hover{
+  color:#ff9800;
 }
 
 .donate{
-background:#ff9800;
-padding:10px 18px;
-border-radius:5px;
+  background:#ff9800;
+  padding:10px 18px;
+  border-radius:5px;
 }
 
 .hero{
-background:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644') center/cover;
-color:white;
-text-align:center;
-padding:120px 20px;
+  background:url('https://images.unsplash.com/photo-1596496052859-6a1d9f3f0d8f') center/cover no-repeat;
+  background-size: cover;
+  color:white;
+  text-align:center;
+  padding:120px 20px;
 }
 
 .hero h1{
-font-size:45px;
-margin-bottom:10px;
+  font-size:45px;
+  margin-bottom:10px;
 }
 
 .hero p{
-font-size:20px;
-margin-bottom:20px;
+  font-size:20px;
+  margin-bottom:20px;
 }
 
 .btn{
-background:#ff9800;
-color:white;
-padding:12px 22px;
-text-decoration:none;
-border-radius:5px;
-margin:5px;
-display:inline-block;
+  background:#ff9800;
+  color:white;
+  padding:12px 22px;
+  text-decoration:none;
+  border-radius:5px;
+  margin:5px;
+  display:inline-block;
+  transition: background 0.3s;
+}
+
+.btn:hover{
+  background:#e68900;
 }
 
 .section{
-padding:60px 40px;
-max-width:1100px;
-margin:auto;
+  padding:60px 40px;
+  max-width:1100px;
+  margin:auto;
 }
 
 .stats{
-display:flex;
-justify-content:space-around;
-text-align:center;
-background:white;
-padding:40px 0;
+  display:flex;
+  justify-content:space-around;
+  text-align:center;
+  background:white;
+  padding:40px 0;
+  flex-wrap: wrap;
 }
 
 .stat h2{
-color:#0a4d8c;
-font-size:35px;
+  color:#0a4d8c;
+  font-size:35px;
+  margin-bottom:5px;
 }
 
 .programs{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
 }
 
 .card{
-background:white;
-padding:25px;
-border-radius:6px;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+  background:white;
+  padding:25px;
+  border-radius:6px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover{
+  transform: translateY(-5px);
 }
 
 footer{
-background:#0a4d8c;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:40px;
+  background:#0a4d8c;
+  color:white;
+  text-align:center;
+  padding:30px;
+  margin-top:40px;
+}
+
+footer a{
+  color:white;
+  margin: 0 10px;
+  text-decoration:none;
+}
+
+footer a:hover{
+  color:#ff9800;
 }
 
 input, textarea{
-width:100%;
-padding:10px;
-margin:8px 0;
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border:1px solid #ccc;
+  border-radius:4px;
 }
 
 button{
-background:#0a4d8c;
-color:white;
-border:none;
-padding:12px 20px;
+  background:#0a4d8c;
+  color:white;
+  border:none;
+  padding:12px 20px;
+  border-radius:4px;
+  cursor:pointer;
+  transition: background 0.3s;
 }
 
+button:hover{
+  background:#093a6c;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h2>CPF</h2>
-
-<nav>
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#programs">Programs</a>
-<a href="#impact">Impact</a>
-<a href="#contact">Contact</a>
-<a class="donate" href="#">Donate</a>
-</nav>
+  <h2>CPF</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#programs">Programs</a>
+    <a href="#impact">Impact</a>
+    <a href="#contact">Contact</a>
+    <a class="donate" href="#contact">Donate</a>
+  </nav>
 </header>
 
 <section class="hero">
-
-<h1>Empowering Children with Potential</h1>
-
-<p>Supporting needy learners in Malawi through education, school supplies, and academic support.</p>
-
-<a class="btn" href="#impact">Our Impact</a>
-<a class="btn" href="#">Support Our Work</a>
-
+  <h1>Empowering Children with Potential</h1>
+  <p>Supporting needy learners in Malawi through education, school supplies, and academic support.</p>
+  <a class="btn" href="#impact">Our Impact</a>
+  <a class="btn" href="#contact">Support Our Work</a>
 </section>
 
 <section class="stats">
-
-<div class="stat">
-<h2>500+</h2>
-<p>Students Supported</p>
-</div>
-
-<div class="stat">
-<h2>20+</h2>
-<p>Schools Reached</p>
-</div>
-
-<div class="stat">
-<h2>5</h2>
-<p>Years of Service</p>
-</div>
-
+  <div class="stat">
+    <h2>500+</h2>
+    <p>Students Supported</p>
+  </div>
+  <div class="stat">
+    <h2>20+</h2>
+    <p>Schools Reached</p>
+  </div>
+  <div class="stat">
+    <h2>5</h2>
+    <p>Years of Service</p>
+  </div>
 </section>
 
 <section class="section" id="about">
-
-<h2>About Us</h2>
-
-<p>
-Children with Potential Foundation (CPF) is dedicated to empowering disadvantaged students in Malawi.
-We believe every child has the potential to succeed if given access to education and the necessary learning resources.
-</p>
-
-<p>
-Our mission is to reduce school dropout rates by providing school supplies, academic support, and working closely with communities and teachers.
-</p>
-
+  <h2>About Us</h2>
+  <p>
+    Children with Potential Foundation (CPF) is dedicated to empowering disadvantaged students in Malawi.
+    We believe every child has the potential to succeed if given access to education and the necessary learning resources.
+  </p>
+  <p>
+    Our mission is to reduce school dropout rates by providing school supplies, academic support, and working closely with communities and teachers.
+  </p>
 </section>
 
 <section class="section" id="programs">
-
-<h2>What We Do</h2>
-
-<div class="programs">
-
-<div class="card">
-<h3>Supporting Needy Learners</h3>
-<p>Providing uniforms, learning materials, and basic needs so students can focus on their education.</p>
-</div>
-
-<div class="card">
-<h3>Reducing School Dropouts</h3>
-<p>Helping remove financial and social barriers that prevent students from staying in school.</p>
-</div>
-
-<div class="card">
-<h3>Community Engagement</h3>
-<p>Working with teachers, parents, and communities to support inclusive education.</p>
-</div>
-
-</div>
-
+  <h2>What We Do</h2>
+  <div class="programs">
+    <div class="card">
+      <h3>Supporting Needy Learners</h3>
+      <p>Providing uniforms, learning materials, and basic needs so students can focus on their education.</p>
+    </div>
+    <div class="card">
+      <h3>Reducing School Dropouts</h3>
+      <p>Helping remove financial and social barriers that prevent students from staying in school.</p>
+    </div>
+    <div class="card">
+      <h3>Community Engagement</h3>
+      <p>Working with teachers, parents, and communities to support inclusive education.</p>
+    </div>
+  </div>
 </section>
 
 <section class="section" id="impact">
-
-<h2>Impact & Testimonies</h2>
-
-<p>
-"Thanks to CPF, I was able to return to school and continue my education." – Student Beneficiary
-</p>
-
-<p>
-"The support from CPF has helped many students in our school remain focused on their studies." – Local Teacher
-</p>
-
+  <h2>Impact & Testimonies</h2>
+  <p>"Thanks to CPF, I was able to return to school and continue my education." – Student Beneficiary</p>
+  <p>"The support from CPF has helped many students in our school remain focused on their studies." – Local Teacher</p>
 </section>
 
 <section class="section" id="contact">
-
-<h2>Contact Us</h2>
-
-<form>
-
-<input type="text" placeholder="Your Name">
-
-<input type="email" placeholder="Your Email">
-
-<textarea rows="5" placeholder="Your Message"></textarea>
-
-<button>Send Message</button>
-
-</form>
-
-<p>
-Email: info@childrenpf.org  
-<br>
-Phone: +265 997 267 390
-</p>
-
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button>Send Message</button>
+  </form>
+  <p>Email: <a href="mailto:info@childrenpf.org">info@childrenpf.org</a><br>
+  Phone: +265 997 267 390</p>
 </section>
 
 <footer>
-
-<p>© 2026 Children with Potential Foundation</p>
-
-<p>Follow us on Facebook | LinkedIn | Instagram</p>
-
+  <p>© 2026 Children with Potential Foundation</p>
+  <p>
+    <a href="https://facebook.com" target="_blank">Facebook</a>|
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>|
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+  </p>
 </footer>
+
+<script>
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+</script>
 
 </body>
 </html>
